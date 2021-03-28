@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<heading>
+    <div class="welcome">
+        <center>
+            Welcome To LTI
+        </center>
+    </div>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index")</li>
+                <li>@Html.ActionLink("Register", "Register")</li>
+                <li>@Html.ActionLink("Login", "Login")</li>
+                <li style="float: right;"><a href="#"><img src="~/Content/images/lti.jpg"></a></li>
+            </ul>
+        </div>
+    </nav>
+</heading>
+<form method="post">
+    <h2>Login to LTI Portal</h2>
+    <table>
+        <tr>
+            <td>Username</td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Enter Username" name="uid" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+        </tr>
+        <tr>
+            <td><input type="password" placeholder="Enter Password" name="pid" required></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login" onclick="loginval()"></td>
+        </tr>
+    </table>
+    <table style="width: 40%; background-color: #a0a0a08c; margin-left: 33%; padding: 10px;">
+        <tr>
+            <td><input type="reset" value="Cancel"></td>
+            <td style="text-align: right;">Forgot <a href="#">Password?</a></td>
+        </tr>
+    </table>
+</form>
+
+<footer>
+    &#169;2020 Larsen & Toubro Infotech Limited
+</footer>
+
+<script type="text/javascript">
+    function registerval() {
+        var txtname = document.getElementById("txtname").value;
+        var password = document.getElementById("txtpass").value;
+        var email = document.getElementById("email").value;
+        var city = document.getElementById("city").value;
+        var mobile = document.getElementById("mobile").value;
+        if (txtname == "") {
+            alert("Name can not be empty");
+            return;
+        }
+        if (password == "") {
+            alert("password can not be empty");
+            return;
+        }
+        var exp = new RegExp("^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@@#$%&])(?=.{4,20}))");
+        if (!exp.test(password)) {
+            alert("password is weak");
+            return;
+        }
+        if (email == "") {
+            alert("email can not be empty");
+            return;
+        }
+        if (city == "") {
+            alert("city can not be empty");
+            return;
+        }
+        if (mobile == "") {
+            alert("mobile can not be empty");
+            return;
+        }
+    }
+
+    function loginval() {
+        var uid = document.getElementsByName("uid")[0].value;
+        var pid = document.getElementsByName("pid")[0].value;
+        if (uid == "") {
+            alert("Username can not be empty");
+            return;
+        }
+        if (pid == "") {
+            alert("Passowrd can not be empty");
+            return;
+        }
+    }
+</script>

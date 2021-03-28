@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<heading>
+    <div class="welcome">
+        <center>
+            Welcome To LTI
+        </center>
+    </div>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index")</li>
+                <li>@Html.ActionLink("Register", "Register")</li>
+                <li>@Html.ActionLink("Login", "Login")</li>
+                <li style="float: right;"><a href="#"><img src="~/Content/images/lti.jpg"></a></li>
+            </ul>
+        </div>
+    </nav>
+</heading>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <h2>Register to Explore Amazing Career Opportunities</h2>
+    <table>
+        <tr>
+            <td>Username</td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Enter Username" name="txtname" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+        </tr>
+        <tr>
+            <td><input type="password" placeholder="Enter Password" name="txtpass" minlength="8" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+        </tr>
+        <tr>
+            <td><input type="email" placeholder="Enter email Address" name="email" required></td>
+        </tr>
+        <tr>
+            <td>City</td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Enter City" name="city" required></td>
+        </tr>
+        <tr>
+            <td>Mobile No.</td>
+        </tr>
+        <tr>
+            <td><input type="number" placeholder="Enter Mobile Number" name="mobile" required></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Register" onclick="registerval()"></td>
+        </tr>
+    </table>
+}
+
+    <footer>
+        &#169;2020 Larsen & Toubro Infotech Limited
+    </footer>
+
+
+
+    <script type="text/javascript">
+        function registerval() {
+            var txtname = document.getElementsByName("txtname")[0].value;
+            var password = document.getElementsByName("txtpass")[0].value;
+            var email = document.getElementsByName("email")[0].value;
+            var city = document.getElementsByName("city")[0].value;
+            var mobile = document.getElementsByName("mobile")[0].value;
+            if (txtname == "") {
+                alert("Name can not be empty");
+                return false;
+            }
+            if (password == "") {
+                alert("password can not be empty");
+                return false;
+            }
+            var exp = new RegExp("^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@@#$%&])(?=.{4,20}))");
+            if (!exp.test(password)) {
+                alert("password is weak");
+                return false;
+            }
+            if (email == "") {
+                alert("email can not be empty");
+                return false;
+            }
+            if (city == "") {
+                alert("city can not be empty");
+                return false;
+            }
+            if (mobile == "") {
+                alert("mobile can not be empty");
+                return false;
+            }
+        }
+
+        function loginval() {
+            var uid = document.getElementById("uid").value;
+            var pid = document.getElementById("pid").value;
+            if (uid == "") {
+                alert("Username can not be empty");
+                return false;
+            }
+            if (pid == "") {
+                alert("Passowrd can not be empty");
+                return false;
+            }
+        }
+
+    </script>

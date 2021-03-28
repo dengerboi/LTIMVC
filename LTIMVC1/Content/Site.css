@@ -1,0 +1,141 @@
+﻿body {
+    background-color: #f1f1f1;
+    font-family: sans-serif;
+}
+
+ul {
+    width: 90%;
+    display: inline-block;
+    list-style-type: none;
+    background-color: #00008c;
+    margin-left: 3%;
+    margin-right: auto;
+}
+
+li {
+    float: left;
+    padding-top: 15px;
+}
+
+    li a {
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        height: 50px;
+        margin-top: 10px;
+        vertical-align: middle;
+    }
+
+    li img {
+        height: 40px;
+        padding-bottom: 10px;
+    }
+
+nav {
+    display: block;
+}
+
+.welcome {
+    background-color: white;
+    font-size: 35px;
+    font-weight: bold;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+article {
+    background-color: white;
+    font-size: 16px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.beliefs img {
+    height: 200px;
+    padding-left: 20px;
+}
+
+.beliefs table {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #A0A0A0;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+form {
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    form h2 {
+        text-align: center;
+    }
+
+    form table {
+        margin: auto;
+    }
+
+input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+form table td {
+    padding-bottom: 1px;
+}
+
+input[type=submit] {
+    width: 120%;
+    background-color: #00008c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #00008c83;
+    }
+
+input[type=reset] {
+    width: 100%;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type=reset]:hover {
+        background-color: rgba(255, 68, 0, 0.308);
+    }
